@@ -1,7 +1,13 @@
-.body {
+body {
     display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.reloading .amount {
+    margin-top: 20px;
+}
 .boxHolder {
     display: grid;
     grid-template-rows: repeat(16, 20px);
@@ -11,4 +17,10 @@
 .box {
     border:solid;
     border-width: thin;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row nowrap;
+    align-items: space-between;
 }
