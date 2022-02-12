@@ -1,4 +1,5 @@
 body {
+    background-color: rgba(152, 152, 158, 0.753);
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -8,19 +9,29 @@ body {
 .reloading .amount {
     margin-top: 20px;
 }
-.boxHolder {
-    display: grid;
-    grid-template-rows: repeat(16, 20px);
-    grid-template-columns: repeat(16, 20px);
-}
 
-.box {
-    border:solid;
+.boxHolder {
+    height: 500px;
+    width: 500px;
+    display: grid;
+    grid-template: repeat(16, 1fr) / repeat(16, 1fr);
     border-width: thin;
+    border: solid;
 }
 
 .buttons {
     display: flex;
     flex-direction: row nowrap;
-    align-items: space-between;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    font-family: 'roboto' 'sans serif';
+    font-weight: bold;
+    color: white;
+    background-color:rgba(80, 85, 155, 0.753);
+    padding: 5px 32px;
+    border-radius: 8px;
+    
 }
