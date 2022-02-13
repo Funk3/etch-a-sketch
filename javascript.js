@@ -4,7 +4,6 @@ const reload = document.querySelector('.reloading');
 
 let gridSize = 64;
 
-//create 256 boxes and insert them into boxholder class
 function makeGrid(){
     for (i = 0; i < Math.pow(gridSize, 2); i++) {
         const boxes = document.createElement('div');
@@ -18,11 +17,10 @@ function makeGrid(){
 
 makeGrid();
 
-const boxRef = Array.from(document.getElementsByClassName('box'));
-
 size.innerHTML = "Change Size";
 reload.innerHTML= "Clear";
 
+const boxRef = Array.from(document.getElementsByClassName('box'));
 
 reload.addEventListener('click', reload => {
     boxRef.forEach((box) => {
@@ -39,19 +37,21 @@ size.addEventListener('click', size => {
         window.alert('You cannot go over 64! Please choose again')
         return promptMe;
     }
+    
     boxRef.forEach((box) => {
         box.removeAttribute('style')
      });
 
-    gridChange.setProperty('grid-template', `repeat(${promptMe}, minmax(1px, 500px)) / repeat(${promptMe}, 1fr)`);
+    gridChange.setProperty('grid-template', `repeat(${promptMe}, minmax(1px, 500px)) / repeat(${promptMe}, minmax(1px, 500px))`);
     
     let gridSize = promptMe;
 
     makeGrid();
 });
 
-// have default size of 16x16
-//have button show a prompt that changes the variable depending on the number you choose
+// I presume that the size issue you're having is that page doesn't respond if grid size is set too big. 
+//That's because you're doing a new size calculations for each and every square that gets added.  
+//try moving that part of code to a separate variable an use that to draw grid.
 
  
 
