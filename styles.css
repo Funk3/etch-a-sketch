@@ -11,10 +11,11 @@ body {
 }
 
 .boxHolder {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(1px, 500px));
+    grid-template-rows: repeat(8, minmax(1px, 500px));
     height: 500px;
     width: 500px;
-    display: grid;
-    grid-template: repeat(16, 1fr) / repeat(16, 1fr);
     border-width: thin;
     border: solid;
 }
