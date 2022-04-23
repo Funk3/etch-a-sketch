@@ -1,15 +1,22 @@
+
+
 body {
-    background-color: rgba(152, 152, 158, 0.753);
+    height: 100vh;
+    width: 100vw;
+    background-color: #CBBFF1;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    row-gap: 20px;
 }
 
-.reloading .amount {
-    margin-top: 20px;
+.title {
+    font-family: 'sans';
+    font-weight: bolder;
+    font-size: 50px;
+    color: #120A2C;
 }
-
 .boxHolder {
     display: grid;
     grid-template-columns: repeat(8, minmax(1px, 500px));
@@ -18,6 +25,7 @@ body {
     width: 500px;
     border-width: thin;
     border: solid;
+    border-color: #120A2C;
 }
 
 .buttons {
@@ -28,11 +36,10 @@ body {
 }
 
 button {
-    font-family: 'roboto' 'sans serif';
-    font-weight: bold;
+    font-weight: bolder;
     color: white;
-    background-color:rgba(80, 85, 155, 0.753);
-    padding: 5px 32px;
+    background-color:#4A27B2;
+    padding: 10px 32px;
     border-radius: 8px;
-    
+    width: 175px;
 }

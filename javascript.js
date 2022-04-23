@@ -17,7 +17,7 @@ function makeGrid(){
 
 makeGrid();
 
-size.innerHTML = "Change Size";
+size.innerHTML = "Size";
 reload.innerHTML= "Clear";
 
 const boxRef = Array.from(document.getElementsByClassName('box'));
