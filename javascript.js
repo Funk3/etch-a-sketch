@@ -49,9 +49,6 @@ size.addEventListener('click', size => {
     makeGrid();
 });
 
-// I presume that the size issue you're having is that page doesn't respond if grid size is set too big. 
-//That's because you're doing a new size calculations for each and every square that gets added.  
-//try moving that part of code to a separate variable an use that to draw grid.
 
  
 
