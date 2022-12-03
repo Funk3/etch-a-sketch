@@ -1,10 +1,10 @@
 const boxHolder = document.querySelector('.boxHolder');
-const size = document.querySelector('.amount');
-const reload = document.querySelector('.reloading');
+const size      = document.querySelector('.amount');
+const reload    = document.querySelector('.reloading');
 
 let gridSize = 64;
 
-function makeGrid(){
+const makeGrid = () => {
     for (i = 0; i < Math.pow(gridSize, 2); i++) {
         const boxes = document.createElement('div');
         boxes.classList.add('box')
